@@ -88,11 +88,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="412" id="yNa-09-L86" userLabel="imageCell" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="412"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="367" id="yNa-09-L86" userLabel="imageCell" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yNa-09-L86" id="fwf-NW-a73">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="411.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="366.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-EO-isT" customClass="PFImageView">
@@ -194,6 +194,7 @@
                             </button>
                             <connections>
                                 <action selector="onPost:" destination="V2m-8U-S3b" id="lzq-DB-v6x"/>
+                                <segue destination="fWl-YJ-zAi" kind="presentation" id="hya-Ad-rIQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -249,7 +250,6 @@
         <image name="insta_camera_btn" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gxe-Gl-JBt"/>
         <segue reference="Xza-dj-u2c"/>
     </inferredMetricsTieBreakers>
 </document>

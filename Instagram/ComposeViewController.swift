@@ -97,7 +97,7 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
         Post.postUserImage(image: imagePost.image, withCaption: captionTextView.text){(success, error) in
             if success{
                 print("post sucessful")
-                self.performSegue(withIdentifier: "postSegue", sender: nil)
+                self.performSegue(withIdentifier: "homeSeg", sender: nil)
             }
             else if let e = error as NSError?{
                 print (e.localizedDescription)
