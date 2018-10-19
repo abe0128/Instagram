@@ -1,30 +1,23 @@
 //
-//  MainPageViewController.swift
+//  ComposeViewController.swift
 //  Instagram
 //
-//  Created by Abraham De Alba on 10/2/18.
+//  Created by Abraham De Alba on 10/18/18.
 //  Copyright © 2018 Abraham De Alba. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class MainPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ComposeViewController: UIViewController {
 
-    @IBAction func onSignout(_ sender: Any)
+    @IBAction func onCancel(_ sender: Any)
     {
-        PFUser.logOut()
-        _ = PFUser.current()
-        self.performSegue(withIdentifier: "LogoutSeg", sender: nil)
-    }
-    @IBAction func onCompose(_ sender: Any)
-    {
-        self.performSegue(withIdentifier: "composeSeg", sender: nil)
+        self.performSegue(withIdentifier: "homeSeg", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        // Do any additional setup after loading the view.
     }
     
 

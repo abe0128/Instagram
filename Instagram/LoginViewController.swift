@@ -28,18 +28,13 @@ class LoginViewController: UIViewController {
             (success: Bool, error: Error?) in
             if let error = error
             {
-                if error._code == 202
-                {
-                    print("Username is already taken")
-                }
-                else
-                {
-                    print(error.localizedDescription)
-                }
+                print(error.localizedDescription)
             }
             else
             {
-                self.performSegue(withIdentifier: "LoginSeg", sender: nil)
+                print("User Registered successfully")
+                
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
     }
