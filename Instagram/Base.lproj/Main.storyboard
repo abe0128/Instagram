@@ -83,12 +83,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fd-Gl-Yfo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fd-Gl-Yfo" userLabel="Home Table View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="367" id="yNa-09-L86" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="367" id="yNa-09-L86" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yNa-09-L86" id="fwf-NW-a73" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
@@ -203,7 +203,7 @@
                     <connections>
                         <outlet property="captionTextView" destination="fQc-vg-8dE" id="V2E-e0-b2f"/>
                         <outlet property="imagePost" destination="18X-nI-1wF" id="xTq-Fw-V61"/>
-                        <segue destination="fWl-YJ-zAi" kind="show" identifier="homeSeg" id="Xza-dj-u2c"/>
+                        <segue destination="H5w-G2-k1p" kind="presentation" identifier="shareSeg" id="q5Y-q3-ogp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ca-6R-QlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,7 +213,7 @@
         <!--Navigation Controller-->
         <scene sceneID="G41-vh-7Eg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H5w-G2-k1p" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav1" automaticallyAdjustsScrollViewInsets="NO" id="H5w-G2-k1p" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GGU-3F-uIa">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -252,7 +252,7 @@
         <image name="insta_camera_btn" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="prp-iR-nQ2"/>
-        <segue reference="Xza-dj-u2c"/>
+        <segue reference="Gxe-Gl-JBt"/>
+        <segue reference="q5Y-q3-ogp"/>
     </inferredMetricsTieBreakers>
 </document>
