@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
-        <!--Main Page View Controller-->
+        <!--Home Feed-->
         <scene sceneID="mnh-PI-wyd">
             <objects>
                 <viewController id="fWl-YJ-zAi" customClass="MainPageViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,14 +88,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="367" id="yNa-09-L86" userLabel="imageCell" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="367" id="yNa-09-L86" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yNa-09-L86" id="fwf-NW-a73">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yNa-09-L86" id="fwf-NW-a73" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="366.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-EO-isT" customClass="PFImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-EO-isT" customClass="PFImageView">
                                                     <rect key="frame" x="15" y="11" width="345" height="225"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -119,7 +119,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gK4-MP-tx1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HS8-cg-Tnd">
+                    <navigationItem key="navigationItem" title="Home Feed" id="HS8-cg-Tnd">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="SRy-fJ-g7y">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PEY-Ki-30L">
                                 <rect key="frame" x="16" y="7" width="52" height="30"/>
@@ -191,10 +191,12 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Share"/>
+                                <connections>
+                                    <segue destination="H5w-G2-k1p" kind="presentation" identifier="shareSeg" id="prp-iR-nQ2"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="onPost:" destination="V2m-8U-S3b" id="lzq-DB-v6x"/>
-                                <segue destination="fWl-YJ-zAi" kind="presentation" id="hya-Ad-rIQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -250,6 +252,7 @@
         <image name="insta_camera_btn" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="prp-iR-nQ2"/>
         <segue reference="Xza-dj-u2c"/>
     </inferredMetricsTieBreakers>
 </document>

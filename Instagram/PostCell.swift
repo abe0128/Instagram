@@ -8,10 +8,11 @@
 
 import UIKit
 import ParseUI
+import Parse
 
 class PostCell: UITableViewCell {
     
-    @IBOutlet var imagePost: PFImageView!
+    @IBOutlet weak var imagePost: PFImageView!
     
     @IBOutlet weak var postCaption: UILabel!
     

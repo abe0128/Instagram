@@ -15,9 +15,7 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     @IBOutlet weak var captionTextView: UITextView!
-    
     @IBOutlet weak var imagePost: UIImageView!
-    
     @IBAction func onCancel(_ sender: Any)
     {
         self.performSegue(withIdentifier: "homeSeg", sender: nil)
@@ -37,6 +35,7 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     {
         imagePickerHelper()
     }
+    
     let vc = UIImagePickerController()
     
     func imagePickerHelper()
@@ -94,13 +93,15 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func onPost(_ sender: Any)
     {
+        //print("Blah!")
         Post.postUserImage(image: imagePost.image, withCaption: captionTextView.text){(success, error) in
             if success{
                 print("post sucessful")
-                self.performSegue(withIdentifier: "homeSeg", sender: nil)
+                self.performSegue(withIdentifier: "shareSeg", sender: nil)
             }
             else if let e = error as NSError?{
                 print (e.localizedDescription)
+                print ("DOES  NOT WORK!")
             }
         }
     }
